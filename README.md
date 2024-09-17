@@ -1,4 +1,4 @@
-Main Dashboard:
+Main Dashboard: 
    List of cards:
       Digital Clock:
          https://github.com/wassy92x/lovelace-digital-clock
