@@ -10,3 +10,6 @@ Bubble Card:
    https://github.com/Clooos/Bubble-Card
 Lovelace swipe card:
    https://github.com/bramkragten/swipe-card
+Sunsynk-Power-Flow-Card:
+   https://github.com/slipx06/sunsynk-power-flow-card
+
