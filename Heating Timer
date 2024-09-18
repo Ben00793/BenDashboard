@@ -1,0 +1,50 @@
+For the 'Heating On Today' card to work I had to extract my hvac_action attribute of my nest thermostat.
+To do that I had to install from HACS: HomeAssistant component: attributes: https://github.com/pilotak/homeassistant-attributes
+Then add this code to my configuration.yaml
+
+sensor:
+  - platform: attributes
+    friendly_name: "Heater"
+    attribute: hvac_action
+    icon: "mdi:clock"
+    entities:
+      - climate.downstairs
+So this is now available as a sensor in entities. It can be either off, idle or heating. 
+Off when your heatig is tuned off, idle is when the heating is on but the target temperature is lower then the current temperature.
+Heating is when the target temperature is set higher then the current temperature.
+
+After this I created an other sensor that counts when this previous sensor is in heating state:
+
+- platform: history_stats
+  name: Heating Timer
+  entity_id: sensor.downstairs_hvac_action
+  state: "heating"
+  type: time
+
+I created a helper meter that resets daily, just to make sure thet the time is always correct for that day and I called it sensor.heating_day.
+
+In theory you dont have to do this because:
+Home Assistant will use its default behavior, which sets the time range to the last 24 hours by default. Here's how the system behaves:
+Without start and end:
+The sensor will track how long the entity has been in the "heating" state during the past 24 hours (rolling window).
+This means the total heating time will always be based on the last 24 hours from the current time, and it will constantly update.
+
+In order to display the time in a more presentable way a created this sensor in the configuration.yaml:
+
+- platform: template
+    sensors:
+      heating_time_in_hours_and_minutes:
+              friendly_name: "Heating Time in Hours and Minutes"
+              value_template: >
+                {% set total_hours = states('sensor.heating_day') | float %}
+                {% set hours = total_hours | int %}
+                {% set minutes = ((total_hours - hours) * 60) | round %}
+                {% if hours > 0 %}
+                  {{ hours }} hour{{ 's' if hours > 1 else '' }} and {{ minutes }} minute{{ 's' if minutes > 1 else '' }}
+                {% else %}
+                  {{ minutes }} minute{{ 's' if minutes > 1 else '' }}
+                {% endif %}
+
+This is the sensor that I display on my main dashboard.
+Probably there is a more simple way to do this but this is how I managed to get it working with te knowlege I have.
+Im open for suggestions in order to simplify this.
