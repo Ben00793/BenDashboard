@@ -43,5 +43,12 @@ Co2 Dashboard:
    Carbon Intensity UK sensor:      
       https://github.com/alanmcgore/sensor.carbon_intensity_uk      
 Weather Dashboard:      
- It comes up when you clink on the Air Quality card on main dashboard:      
+ It comes up when you click on the Air Quality card on main dashboard:      
    https://www.windy.com/ ---> 3 lines on top right coner ---> embed widget      
+
+
+
+Integrations:
+yTube Music Player: https://github.com/KoljaWindeler/ytube_music_player      
+HA Solcast PV Solar Forecast Integration: https://github.com/BJReplay/ha-solcast-solar      
+
