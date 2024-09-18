@@ -48,7 +48,7 @@ Weather Dashboard:
 
 
 
-Integrations:
+Integrations:      
 yTube Music Player: https://github.com/KoljaWindeler/ytube_music_player      
 HA Solcast PV Solar Forecast Integration: https://github.com/BJReplay/ha-solcast-solar      
 
