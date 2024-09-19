@@ -1,4 +1,4 @@
-First of all, I'm still a beginner in this whole Home Assistant and Smart Home business. I share the code I have, but it will not be updated regularry. I might do updated occasionally, as my time allows me to do it. You can raise issues if you have questions, or suggestions, I will try to answer them, but it is not a guarentee.
+First of all, I'm still a beginner in this whole Home Assistant and Smart Home business. I share the code I have, but it will not be updated regularly. I might do updated occasionally, as my time allows me to do it. You can raise issues if you have questions, or suggestions, I will try to answer them, but it is not a guarantee.      
 
 Main Dashboard:  
    List of cards:      
