@@ -1,3 +1,5 @@
+First of all, I'm still a beginner in this whole Home Assistant and Smart Home business. I share the code I have, but it will not be updated regularry. I might do updated occasionally, as my time allows me to do it. You can raise issues if you have questions, or suggestions, I will try to answer them, but it is not a guarentee.
+
 Main Dashboard:  
    List of cards:      
       Digital Clock:      
@@ -39,6 +41,9 @@ Energy 2 Dashboard:
          https://github.com/dbuezas/lovelace-plotly-graph-card      
       Flexible Horseshoe Card:      
          https://github.com/AmoebeLabs/flex-horseshoe-card      
+      Most of the card are copied from here:      
+      Sunsynk-Home-Assistant-Dash: https://github.com/slipx06/Sunsynk-Home-Assistant-Dash     
+
 Co2 Dashboard:      
    Carbon Intensity UK sensor:      
       https://github.com/alanmcgore/sensor.carbon_intensity_uk      
