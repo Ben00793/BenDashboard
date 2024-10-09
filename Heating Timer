@@ -20,6 +20,8 @@ After this I created an other sensor that counts when this previous sensor is in
   entity_id: sensor.downstairs_hvac_action
   state: "heating"
   type: time
+  start: "{{ now().replace(hour=0, minute=0, second=0) }}"
+  end: "{{ now() }}"
 
 I created a helper meter that resets daily, just to make sure thet the time is always correct for that day and I called it sensor.heating_day.
 
